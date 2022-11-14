@@ -1,12 +1,12 @@
-import React from 'react'
-import { AiOutlineUnorderedList } from 'react-icons/ai'
+import React from "react";
+import { AiOutlineUnorderedList } from "react-icons/ai";
 
-import Box from '#components/Box'
-import { Header, BoxContent } from '#components/Box/Standard/styles'
+import Box from "#components/Box";
+import { Header, BoxContent } from "#components/Box/Standard/styles";
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 const StandardBox: React.FC<Props> = ({ children }) => {
   const BoxHeader = () => (
@@ -14,13 +14,13 @@ const StandardBox: React.FC<Props> = ({ children }) => {
       <AiOutlineUnorderedList />
       <strong>README.md</strong>
     </Header>
-  )
+  );
 
   return (
     <Box header={<BoxHeader />}>
       <BoxContent>{children}</BoxContent>
     </Box>
-  )
-}
+  );
+};
 
-export default StandardBox
+export default StandardBox;

@@ -1,12 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import { Item as StyledItem, Break, Subtitle, MiddleAligned, Name, Chip } from '#components/ItemsList/styles'
+import {
+  Item as StyledItem,
+  Break,
+  Subtitle,
+  MiddleAligned,
+  Name,
+  Chip,
+} from "#components/ItemsList/styles";
 
-import { Item, ChipType, TextSize } from '#types'
+import { Item, ChipType, TextSize } from "#types";
 
 type Props = {
-  items: Item[]
-}
+  items: Item[];
+};
 
 const ItemsList: React.FC<Props> = ({ items }) => {
   return (
@@ -31,7 +38,7 @@ const ItemsList: React.FC<Props> = ({ items }) => {
         </StyledItem>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default ItemsList
+export default ItemsList;

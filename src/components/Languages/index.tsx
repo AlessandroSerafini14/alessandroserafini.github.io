@@ -1,36 +1,42 @@
-import React from 'react'
+import React from "react";
 
-import { LanguagesBar, LanguageLine, Dot, List, Language as StyledLanguage } from '#components/Languages/styles'
-import { Title, Chip } from '#components/Layout/styles'
-import Text from '#components/Text'
+import {
+  LanguagesBar,
+  LanguageLine,
+  Dot,
+  List,
+  Language as StyledLanguage,
+} from "#components/Languages/styles";
+import { Title, Chip } from "#components/Layout/styles";
+import Text from "#components/Text";
 
-import { MiddleAligned } from '#styles'
-import { ChipType, Language, LanguageLevel, TextSize } from '#types'
+import { MiddleAligned } from "#styles";
+import { ChipType, Language, LanguageLevel, TextSize } from "#types";
 
 const Languages: React.FC = () => {
   const languages: Language[] = [
     {
-      id: 'it',
-      name: 'Italian',
+      id: "it",
+      name: "Italian",
       percentage: 60,
-      color: '#008C45',
+      color: "#008C45",
       level: LanguageLevel.C2,
     },
     {
-      id: 'en',
-      name: 'English',
+      id: "en",
+      name: "English",
       percentage: 35,
-      color: '#C8102E',
+      color: "#C8102E",
       level: LanguageLevel.B2,
     },
     {
-      id: 'fr',
-      name: 'French',
+      id: "fr",
+      name: "French",
       percentage: 5,
-      color: '#002654',
+      color: "#002654",
       level: LanguageLevel.A1,
     },
-  ]
+  ];
 
   return (
     <>
@@ -39,7 +45,11 @@ const Languages: React.FC = () => {
       </Title>
       <LanguagesBar>
         {languages.map((language) => (
-          <LanguageLine size={language.percentage} color={language.color} key={language.id} />
+          <LanguageLine
+            size={language.percentage}
+            color={language.color}
+            key={language.id}
+          />
         ))}
       </LanguagesBar>
       <List>
@@ -55,7 +65,7 @@ const Languages: React.FC = () => {
         ))}
       </List>
     </>
-  )
-}
+  );
+};
 
-export default Languages
+export default Languages;

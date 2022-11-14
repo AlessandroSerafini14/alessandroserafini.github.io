@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
-import { ChipType } from '#types'
+import { ChipType } from "#types";
 
 export const Chip = styled.div<{ type: ChipType }>`
   display: inline-block;
@@ -42,4 +42,4 @@ export const Chip = styled.div<{ type: ChipType }>`
       color: ${({ theme }) => theme.color.successFg};
       border-color: ${({ theme }) => theme.color.successEmphasis};
     `}
-`
+`;

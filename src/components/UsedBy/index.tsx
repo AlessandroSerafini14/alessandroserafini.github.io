@@ -1,18 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext } from "react";
 
-import { Title, Chip } from '#components/Layout/styles'
-import { Image } from '#components/UsedBy/styles'
-import { ExperiencesContext } from '#context/experiences'
+import { Title, Chip } from "#components/Layout/styles";
+import { Image } from "#components/UsedBy/styles";
+import { ExperiencesContext } from "#context/experiences";
 
-import { ChipType, Company } from '#types'
+import { ChipType, Company } from "#types";
 const UsedBy: React.FC = () => {
-  const { experiences } = useContext(ExperiencesContext)
+  const { experiences } = useContext(ExperiencesContext);
 
-  const companies = experiences.map((experience) => experience.company)
+  const companies = experiences.map((experience) => experience.company);
 
   const Logo = ({ company }: { company: Company }) => (
-    <Image alt={company.name} size={32} isCircle key={company.id} src={company.logo} />
-  )
+    <Image size={32} isCircle key={company.id} src={company.logo} />
+  );
 
   return (
     <>
@@ -24,7 +24,12 @@ const UsedBy: React.FC = () => {
         .reverse()
         .map((company) =>
           company.url ? (
-            <a key={company.id} href={company.url} target="_blank" rel="noreferrer">
+            <a
+              key={company.id}
+              href={company.url}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Logo company={company} />
             </a>
           ) : (
@@ -32,7 +37,7 @@ const UsedBy: React.FC = () => {
           )
         )}
     </>
-  )
-}
+  );
+};
 
-export default UsedBy
+export default UsedBy;

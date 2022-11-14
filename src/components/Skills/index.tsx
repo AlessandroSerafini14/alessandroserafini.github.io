@@ -1,33 +1,33 @@
-import React from 'react'
+import React from "react";
 
-import { Title } from '#components/Layout/styles'
-import { Chip } from '#components/Skills/styles'
+import { Title } from "#components/Layout/styles";
+import { Chip } from "#components/Skills/styles";
 
-import { ChipType } from '#types'
+import { ChipType } from "#types";
 
 const Skills: React.FC = () => {
   const skills: string[] = [
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'React.js',
-    'Web Development',
-    'Unit Testing',
-    'React testing library',
-    'Jest',
-    'Redux',
-    'Git',
-    'styled-components',
-    'Storybook',
-    'Gitlab-ci',
-    'Semantic-release',
-    'React Native',
-    'Bootstrap',
-    'HTML5',
-    'jQuery',
-    'SCSS',
-    'CSS',
-  ]
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React.js",
+    "Web Development",
+    "Unit Testing",
+    "React testing library",
+    "Jest",
+    "Redux",
+    "Git",
+    "styled-components",
+    "Storybook",
+    "Gitlab-ci",
+    "Semantic-release",
+    "React Native",
+    "Bootstrap",
+    "HTML5",
+    "jQuery",
+    "SCSS",
+    "CSS",
+  ];
 
   return (
     <>
@@ -38,7 +38,7 @@ const Skills: React.FC = () => {
         </Chip>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

@@ -1,12 +1,14 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { ButtonSize } from '#types'
+import { ButtonSize } from "#types";
 
 export const OutlineButton = styled.button<{ size: ButtonSize }>`
   display: flex;
   align-items: center;
   padding: ${({ size, theme }) =>
-    (size === ButtonSize.SMALL && '3px 12px') || (size === ButtonSize.MEDIUM && `${theme.spacing.s100} ${theme.spacing.s200}`)};
+    (size === ButtonSize.SMALL && "3px 12px") ||
+    (size === ButtonSize.MEDIUM &&
+      `${theme.spacing.s100} ${theme.spacing.s200}`)};
 
   line-height: 20px;
   cursor: pointer;
@@ -15,7 +17,8 @@ export const OutlineButton = styled.button<{ size: ButtonSize }>`
   color: ${({ theme }) => theme.color.btnText};
   background-color: ${({ theme }) => theme.color.btnBg};
   border-color: ${({ theme }) => theme.color.btnBorder};
-  box-shadow: ${({ theme }) => theme.color.btnShadow}, ${({ theme }) => theme.color.btnInsetShadow};
+  box-shadow: ${({ theme }) => theme.color.btnShadow},
+    ${({ theme }) => theme.color.btnInsetShadow};
   transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
   transition-property: color, background-color, box-shadow, border-color;
 
@@ -31,4 +34,4 @@ export const OutlineButton = styled.button<{ size: ButtonSize }>`
     border-color: ${({ theme }) => theme.color.btnHoverBorder};
     transition-duration: 0.1s;
   }
-`
+`;

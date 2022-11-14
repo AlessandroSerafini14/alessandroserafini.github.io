@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import BaseBox from '#components/Box'
-import { Header as BoxHeader } from '#components/Box/styles'
-import Image from '#components/Image'
+import BaseBox from "#components/Box";
+import { Header as BoxHeader } from "#components/Box/styles";
+import Image from "#components/Image";
 
-import { MiddleAligned } from '#styles'
+import { MiddleAligned } from "#styles";
 export const Experiences = styled.div`
   margin-top: -1px;
-`
+`;
 
 export const Row = styled.div`
   display: flex;
@@ -16,10 +16,11 @@ export const Row = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme.color.canvasSubtle};
   }
-`
+`;
 
 export const Column = styled.div<{ isFolder?: boolean }>`
-  padding: ${({ theme }) => theme.spacing.s100} ${({ theme }) => theme.spacing.s200};
+  padding: ${({ theme }) => theme.spacing.s100}
+    ${({ theme }) => theme.spacing.s200};
 
   &:not(:first-child) {
     color: ${({ theme }) => theme.color.fgMuted};
@@ -43,10 +44,11 @@ export const Column = styled.div<{ isFolder?: boolean }>`
   svg {
     width: 20px;
     height: 20px;
-    color: ${({ theme, isFolder }) => (isFolder ? theme.color.iconDirectory : 'inherit')};
+    color: ${({ theme, isFolder }) =>
+      isFolder ? theme.color.iconDirectory : "inherit"};
     margin-right: ${({ theme }) => theme.spacing.s200};
   }
-`
+`;
 
 export const ParentRow = styled(Row)`
   ${Column} {
@@ -60,7 +62,7 @@ export const ParentRow = styled(Row)`
     display: block;
     width: 100%;
   }
-`
+`;
 
 export const Box = styled(BaseBox)`
   margin-bottom: ${({ theme }) => theme.spacing.s200};
@@ -68,14 +70,14 @@ export const Box = styled(BaseBox)`
   ${BoxHeader} {
     background-color: ${({ theme }) => theme.color.canvasSubtle};
   }
-`
+`;
 
 export const Header = styled(MiddleAligned)`
   > * {
     margin-right: ${({ theme }) => theme.spacing.s100};
   }
-`
+`;
 
 export const Avatar = styled(Image)`
   margin-right: ${({ theme }) => theme.spacing.s100};
-`
+`;

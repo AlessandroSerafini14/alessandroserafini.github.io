@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import { Box as StyledBox, Header } from '#components/Box/styles'
+import { Box as StyledBox, Header } from "#components/Box/styles";
 
 type Props = {
-  header: React.ReactNode
-  children: React.ReactNode
-}
+  header: React.ReactNode;
+  children: React.ReactNode;
+};
 
 const Box: React.FC<Props> = ({ header, children, ...restProps }) => {
   return (
@@ -13,7 +13,7 @@ const Box: React.FC<Props> = ({ header, children, ...restProps }) => {
       <Header>{header}</Header>
       {children}
     </StyledBox>
-  )
-}
+  );
+};
 
-export default Box
+export default Box;

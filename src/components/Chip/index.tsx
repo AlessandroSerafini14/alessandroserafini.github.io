@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
-import { Chip as StyledChip } from '#components/Chip/styles'
+import { Chip as StyledChip } from "#components/Chip/styles";
 
-import { ChipType } from '#types'
+import { ChipType } from "#types";
 
 type Props = {
-  type?: ChipType
-  children: string
-}
+  type?: ChipType;
+  children: string;
+};
 
 const Chip: React.FC<Props> = ({ type = ChipType.SECONDARY, children }) => {
-  return <StyledChip type={type}>{children}</StyledChip>
-}
+  return <StyledChip type={type}>{children}</StyledChip>;
+};
 
-export default Chip
+export default Chip;

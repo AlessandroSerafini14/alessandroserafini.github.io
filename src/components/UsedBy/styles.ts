@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { Image as BaseImage } from '#components/Image/styles'
+import BaseImage from "#components/Image";
 
 export const Image = styled(BaseImage)`
   margin-right: ${({ theme }) => theme.spacing.s100};
-`
+`;

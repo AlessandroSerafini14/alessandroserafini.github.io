@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { Chip as BaseChip } from '#components/Chip/styles'
-import Text from '#components/Text'
+import { Chip as BaseChip } from "#components/Chip/styles";
+import Text from "#components/Text";
 
-import { MiddleAligned as BaseMiddleAligned } from '#styles'
+import { MiddleAligned as BaseMiddleAligned } from "#styles";
 
 export const Name = styled(Text)`
   flex: 1;
@@ -11,7 +11,7 @@ export const Name = styled(Text)`
   a {
     font-weight: 600;
   }
-`
+`;
 
 export const Item = styled.div`
   display: flex;
@@ -32,22 +32,22 @@ export const Item = styled.div`
   ${Name} {
     margin-right: ${({ theme }) => theme.spacing.s100};
   }
-`
+`;
 
 export const Break = styled.div`
   flex-basis: 100%;
   height: 0;
-`
+`;
 
 export const Subtitle = styled(Text)`
   color: ${({ theme }) => theme.color.fgMuted};
   margin-left: ${({ theme }) => theme.spacing.s300};
-`
+`;
 
 export const MiddleAligned = styled(BaseMiddleAligned)`
   flex: 1;
-`
+`;
 
 export const Chip = styled(BaseChip)`
   margin-right: 0;
-`
+`;
