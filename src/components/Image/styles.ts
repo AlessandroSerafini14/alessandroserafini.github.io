@@ -1,15 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
-export const Image = styled.img<{ isCircle?: boolean; size: number }>`
+export const Image = styled.img<{ isCircle?: boolean }>`
   ${({ isCircle }) =>
     isCircle &&
     css`
       border-radius: 50%;
     `}
-
-  ${({ size }) =>
-    size &&
-    css`
-      width: ${size}px;
-    `}
-`
+`;
