@@ -1,0 +1,121 @@
+{
+  "name": "ale-serafini",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check-types": "tsc",
+    "lint": "yarn check-types && eslint src",
+    "lint:styles": "stylelint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint src --fix",
+    "prepare": "npx husky install",
+    "postinstall": "npx husky install",
+    "commit": "npx git-cz",
+    "release": "semantic-release"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "scope-empty": [
+        2,
+        "never"
+      ],
+      "body-max-line-length": [
+        2,
+        "always",
+        500
+      ]
+    }
+  },
+  "release": {
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/npm",
+      "@semantic-release/release-notes-generator"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix --cache",
+      "git add ."
+    ],
+    "styles.{ts,tsx}": [
+      "stylelint --cache",
+      "git add ."
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "dayjs": "^1.11.6",
+    "next": "13.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-scroll": "^1.8.8",
+    "styled-components": "5.3.6"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "16.2.1",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/gitlab": "8.1.0",
+    "@semantic-release/npm": "8.0.3",
+    "@stylelint/postcss-css-in-js": "0.37.2",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "@types/react-scroll": "^1.8.4",
+    "@types/styled-components": "5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "babel-plugin-styled-components": "2.0.6",
+    "commitizen": "4.2.4",
+    "commitlint": "16.2.3",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.0.1",
+    "eslint-config-next": "13.0.3",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.10",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.7",
+    "semantic-release": "19.0.2",
+    "stylelint": "13.13.1",
+    "stylelint-config-standard": "22.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-order": "4.1.0",
+    "stylelint-processor-styled-components": "1.10.0",
+    "typescript": "^4.8.4",
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.18.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.1.3",
+    "eslint-plugin-import-order-alphabetical": "^1.0.1",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "declaration-colon-newline-after": null,
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "no-eol-whitespace": [
+      true,
+      {
+        "ignore": [
+          "empty-lines"
+        ]
+      }
+    ],
+    "number-leading-zero": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": [
+          "dummyValue"
+        ]
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": [
+          "box",
+          "grid"
+        ]
+      }
+    ],
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": [
+          "box-orient",
+          "grid",
+          "grid-columns",
+          "grid-rows",
+          "grid-column",
+          "grid-row",
+          "line-clamp"
+        ]
+      }
+    ]
+  },
+  "syntax": "scss"
+}
