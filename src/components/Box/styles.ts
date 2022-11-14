@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Box = styled.div`
   background-color: ${({ theme }) => theme.color.canvasDefault};
@@ -10,7 +10,7 @@ export const Box = styled.div`
   h2 {
     margin-top: ${({ theme }) => theme.spacing.s300};
   }
-`
+`;
 
 export const Header = styled.header`
   padding: ${({ theme }) => theme.spacing.s200};
@@ -23,4 +23,4 @@ export const Header = styled.header`
   > div {
     margin-right: ${({ theme }) => theme.spacing.s100};
   }
-`
+`;

@@ -1,22 +1,27 @@
-import React from 'react'
-import { Element } from 'react-scroll'
+import React from "react";
+import { Element } from "react-scroll";
 
-import Educations from '#components/Educations'
-import Experience from '#components/Experiences'
-import Header from '#components/Header'
-import Languages from '#components/Languages'
-import { Layout as StyledLayout, Left, Right, Section } from '#components/Layout/styles'
-import Publications from '#components/Publications'
-import Skills from '#components/Skills'
+import Educations from "#components/Educations";
+import Experience from "#components/Experiences";
+import Header from "#components/Header";
+import Languages from "#components/Languages";
+import {
+  Layout as StyledLayout,
+  Left,
+  Right,
+  Section,
+} from "#components/Layout/styles";
+import Publications from "#components/Publications";
+import Skills from "#components/Skills";
 // import TopBar from "#components/TopBar";
-import UsedBy from '#components/UsedBy'
+import UsedBy from "#components/UsedBy";
 
-import { Experience as IExperience } from '#types'
+import { Experience as IExperience } from "#types";
 
 type Props = {
-  experienceDetail?: IExperience
-  children?: React.ReactNode
-}
+  experienceDetail?: IExperience;
+  children?: React.ReactNode;
+};
 
 const Layout: React.FC<Props> = ({ experienceDetail, children }) => {
   return (
@@ -51,7 +56,7 @@ const Layout: React.FC<Props> = ({ experienceDetail, children }) => {
         </Right>
       </StyledLayout>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

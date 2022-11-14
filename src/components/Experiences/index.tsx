@@ -1,32 +1,42 @@
-import dayjs from 'dayjs'
-import relativeTime from 'dayjs/plugin/relativeTime'
-import Link from 'next/link'
-import React, { useContext } from 'react'
-import { AiFillFolder, AiOutlineFile } from 'react-icons/ai'
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+import Link from "next/link";
+import React, { useContext } from "react";
+import { AiFillFolder, AiOutlineFile } from "react-icons/ai";
 
-import { Row, Column, ParentRow, Avatar, Header, Experiences as StyledExperiences, Box } from '#components/Experiences/styles'
-import Text from '#components/Text'
-import { ExperiencesContext } from '#context/experiences'
+import {
+  Row,
+  Column,
+  ParentRow,
+  Avatar,
+  Header,
+  Experiences as StyledExperiences,
+  Box,
+} from "#components/Experiences/styles";
+import Text from "#components/Text";
+import { ExperiencesContext } from "#context/experiences";
 
-import { MiddleAligned } from '#styles'
-import { Experience, TextSize } from '#types'
+import { MiddleAligned } from "#styles";
+import { Experience, TextSize } from "#types";
 
-dayjs.extend(relativeTime)
+dayjs.extend(relativeTime);
 
 type Props = {
-  experienceDetail?: Experience
-}
+  experienceDetail?: Experience;
+};
 
 const Experiences: React.FC<Props> = ({ experienceDetail }) => {
-  const { experiences } = useContext(ExperiencesContext)
+  const { experiences } = useContext(ExperiencesContext);
 
   const BoxHeader = () => (
     <Header>
-      <Avatar src={'/ale-serafini.jpg'} isCircle size={24} />
+      <Avatar src={"/ale-serafini.jpg"} isCircle size={24} />
       <strong>AleSerafini</strong>
-      <Text>{`feat(${experiences[experiences.length - 1].company.name}): professional and personal growth`}</Text>
+      <Text>{`feat(${
+        experiences[experiences.length - 1].company.name
+      }): professional and personal growth`}</Text>
     </Header>
-  )
+  );
 
   return (
     <Box header={<BoxHeader />}>
@@ -34,7 +44,7 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
         {experienceDetail ? (
           <>
             <ParentRow>
-              <Link href={'/'}>
+              <Link href={"/"}>
                 <Column>
                   <Text size={TextSize.LARGE}>..</Text>
                 </Column>
@@ -62,11 +72,15 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
                 <Column isFolder>
                   <MiddleAligned>
                     <AiFillFolder />
-                    <Link href={`/experience/${experience.id}`}>{experience.company.name}</Link>
+                    <Link href={`/experience/${experience.id}`}>
+                      {experience.company.name}
+                    </Link>
                   </MiddleAligned>
                 </Column>
                 <Column>
-                  <Link href={`/experience/${experience.id}`}>{experience.role}</Link>
+                  <Link href={`/experience/${experience.id}`}>
+                    {experience.role}
+                  </Link>
                 </Column>
                 <Column>{dayjs(experience.startDate).fromNow(true)}</Column>
               </Row>
@@ -74,7 +88,7 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
         )}
       </StyledExperiences>
     </Box>
-  )
-}
+  );
+};
 
-export default Experiences
+export default Experiences;
