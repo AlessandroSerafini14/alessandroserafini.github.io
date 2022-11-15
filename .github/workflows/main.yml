@@ -14,6 +14,7 @@ jobs:
       - name: Lint code
         run: yarn lint
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
