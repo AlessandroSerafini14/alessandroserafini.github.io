@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               <strong>me</strong>
             </Link>
           </Title>
-          <Chip>Publicccc</Chip>
+          <Chip>Public</Chip>
         </MiddleAligned>
         <MiddleAligned>
           <OutlineButton
