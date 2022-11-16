@@ -29,12 +29,12 @@ const Layout: React.FC<Props> = ({ experienceDetail, children }) => {
       <TopBar />
       <Header />
       <StyledLayout>
-        <Element name="experience">
-          <Left>
+        <Left>
+          <Element name="experience">
             <Experience experienceDetail={experienceDetail} />
             {children}
-          </Left>
-        </Element>
+          </Element>
+        </Left>
         <Right>
           <Section name="about">
             <Element name="skills">

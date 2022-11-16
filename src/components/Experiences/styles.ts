@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import BaseBox from "#components/Box";
 import { Header as BoxHeader } from "#components/Box/styles";
@@ -22,22 +22,57 @@ export const Column = styled.div<{ isFolder?: boolean }>`
   padding: ${({ theme }) => theme.spacing.s100}
     ${({ theme }) => theme.spacing.s200};
 
+  /* Desktop */
+  @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
+    width: 55%;
+  }
+
+  /* Tablet */
+  @media (max-width: ${({ theme }) => theme.breakpoint.desktop}) {
+    width: 50%;
+  }
+
+  &:first-child {
+    /* Desktop */
+    @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
+      width: 30%;
+    }
+
+    /* Tablet */
+    @media (max-width: ${({ theme }) => theme.breakpoint.desktop}) {
+      width: 30%;
+    }
+
+    /* Mobile */
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+      width: 75%;
+    }
+  }
+
+  &:last-child {
+    text-align: right;
+
+    /* Desktop */
+    @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
+      width: 15%;
+    }
+
+    /* Tablet */
+    @media (max-width: ${({ theme }) => theme.breakpoint.desktop}) {
+      width: 20%;
+    }
+
+    /* Mobile */
+    @media (max-width: ${({ theme }) => theme.breakpoint.tablet}) {
+      width: 25%;
+    }
+  }
+
   &:not(:first-child) {
     color: ${({ theme }) => theme.color.fgMuted};
   }
 
-  &:last-child {
-    width: 10%;
-    text-align: right;
-  }
-
-  &:first-child {
-    width: 30%;
-    text-align: inherit;
-  }
-
-  &:nth-child(2) {
-    width: 60%;
+  &:not(:last-child) {
     text-align: inherit;
   }
 
@@ -52,7 +87,11 @@ export const Column = styled.div<{ isFolder?: boolean }>`
 
 export const ParentRow = styled(Row)`
   ${Column} {
-    width: 100%;
+    text-align: inherit;
+    ${({ theme }) =>
+      css`
+        width: calc(100% - ${theme.spacing.s400});
+      `};
   }
 
   a {

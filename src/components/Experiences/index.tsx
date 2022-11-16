@@ -15,6 +15,7 @@ import {
 } from "#components/Experiences/styles";
 import Text from "#components/Text";
 import { ExperiencesContext } from "#context/experiences";
+import useMediaQuery from "#hooks/useMediaQuery";
 
 import { MiddleAligned } from "#styles";
 import { Experience, TextSize } from "#types";
@@ -27,6 +28,7 @@ type Props = {
 
 const Experiences: React.FC<Props> = ({ experienceDetail }) => {
   const { experiences } = useContext(ExperiencesContext);
+  const { isMobile } = useMediaQuery();
 
   const BoxHeader = () => (
     <Header>
@@ -57,9 +59,11 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
                   <Text>README.md</Text>
                 </MiddleAligned>
               </Column>
-              <Column>
-                <Text>{`feat(${experienceDetail.company.name}): Read about my experience`}</Text>
-              </Column>
+              {!isMobile && (
+                <Column>
+                  <Text>{`feat(${experienceDetail.company.name}): Read about my experience`}</Text>
+                </Column>
+              )}
               <Column>{dayjs(experienceDetail.startDate).fromNow(true)}</Column>
             </Row>
           </>
@@ -77,11 +81,13 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
                     </Link>
                   </MiddleAligned>
                 </Column>
-                <Column>
-                  <Link href={`/experience/${experience.id}`}>
-                    {experience.role}
-                  </Link>
-                </Column>
+                {!isMobile && (
+                  <Column>
+                    <Link href={`/experience/${experience.id}`}>
+                      {experience.role}
+                    </Link>
+                  </Column>
+                )}
                 <Column>{dayjs(experience.startDate).fromNow(true)}</Column>
               </Row>
             ))

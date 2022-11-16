@@ -5,11 +5,6 @@ export const MiddleAligned = styled.div`
   align-items: center;
 `;
 
-export const SpaceBetween = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
 export const Layout = styled.div`
   margin-right: auto;
   margin-left: auto;

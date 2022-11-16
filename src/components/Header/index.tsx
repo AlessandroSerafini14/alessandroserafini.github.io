@@ -11,6 +11,8 @@ import { IoSchoolOutline } from "react-icons/io5";
 import Chip from "#components/Chip";
 import {
   Container,
+  Info,
+  Contacts,
   Title,
   GoRepoIcon,
   OutlineButton,
@@ -19,7 +21,7 @@ import {
 } from "#components/Header/styles";
 import Text from "#components/Text";
 
-import { MiddleAligned, SpaceBetween } from "#styles";
+import { MiddleAligned } from "#styles";
 import { Anchor, TextSize } from "#types";
 
 const Header: React.FC = () => {
@@ -47,7 +49,7 @@ const Header: React.FC = () => {
 
   return (
     <Container>
-      <SpaceBetween>
+      <Info>
         <MiddleAligned>
           <GoRepoIcon />
           <Title>
@@ -59,7 +61,7 @@ const Header: React.FC = () => {
           </Title>
           <Chip>Public</Chip>
         </MiddleAligned>
-        <MiddleAligned>
+        <Contacts>
           <OutlineButton
             onClick={() => goTo("https://www.linkedin.com/in/aleserafiniweb/")}
             icon={<FaLinkedinIn />}
@@ -72,8 +74,8 @@ const Header: React.FC = () => {
           >
             Email
           </OutlineButton>
-        </MiddleAligned>
-      </SpaceBetween>
+        </Contacts>
+      </Info>
       <NavLinks>
         {anchors.map((anchor) => (
           <NavLink

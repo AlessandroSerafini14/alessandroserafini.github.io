@@ -6,54 +6,21 @@ import { Chip as BaseChip } from "#components/Chip/styles";
 import { Layout as BaseLayout } from "#styles";
 
 export const Layout = styled(BaseLayout)`
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: ${({ theme }) => theme.size.layoutGutter};
+  padding-left: ${({ theme }) => theme.spacing.s400};
+  padding-right: ${({ theme }) => theme.spacing.s400};
 
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoint.mobile} and max-width: ${({ theme }) =>
-      theme.breakpoint.desktop}) {
-    ${({ theme }) =>
-      css`
-        grid-template-columns:
-          minmax(
-            0,
-            calc(
-              100% - ${theme.size.sidebarWidthMobile} -
-                ${theme.size.layoutGutter}
-            )
-          )
-          0 auto;
-      `}
-  }
-
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoint.tablet} and max-width: ${({ theme }) =>
-      theme.breakpoint.desktop}) {
-    ${({ theme }) =>
-      css`
-        grid-template-columns:
-          minmax(
-            0,
-            calc(
-              100% - ${theme.size.sidebarWidthTablet} -
-                ${theme.size.layoutGutter}
-            )
-          )
-          0 auto;
-      `}
-  }
-
+  /* Desktop */
   @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: ${({ theme }) => theme.size.layoutGutter};
+
     ${({ theme }) =>
       css`
         grid-template-columns:
           minmax(
             0,
-            calc(
-              100% - ${theme.size.sidebarWidthDesktop} -
-                ${theme.size.layoutGutter}
-            )
+            calc(100% - ${theme.size.sidebarWidth} - ${theme.size.layoutGutter})
           )
           0 auto;
       `}
@@ -61,7 +28,15 @@ export const Layout = styled(BaseLayout)`
 `;
 
 export const Left = styled.main`
-  grid-column: 1;
+  /* Desktop */
+  @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
+    grid-column: 1;
+  }
+
+  /* Mobile and Tablet */
+  @media (max-width: ${({ theme }) => theme.breakpoint.desktop}) {
+    margin-bottom: ${({ theme }) => theme.spacing.s400};
+  }
 `;
 
 export const Section = styled(Element)`
@@ -85,19 +60,7 @@ export const Chip = styled(BaseChip)`
 export const Right = styled.aside`
   grid-column: 2 / span 2;
 
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoint.mobile} and max-width: ${({ theme }) =>
-      theme.breakpoint.desktop}) {
-    width: ${({ theme }) => theme.size.sidebarWidthMobile};
-  }
-
-  @media (min-width: ${({ theme }) =>
-      theme.breakpoint.tablet} and max-width: ${({ theme }) =>
-      theme.breakpoint.desktop}) {
-    width: ${({ theme }) => theme.size.sidebarWidthTablet};
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoint.desktop}) {
-    width: ${({ theme }) => theme.size.sidebarWidthDesktop};
+    width: ${({ theme }) => theme.size.sidebarWidth};
   }
 `;
