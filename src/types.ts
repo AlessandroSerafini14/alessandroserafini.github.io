@@ -15,6 +15,7 @@ export enum ButtonSize {
 export enum TextSize {
   SMALL,
   LARGE,
+  XLARGE,
 }
 
 export enum LanguageLevel {

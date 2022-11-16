@@ -13,7 +13,7 @@ import {
 } from "#components/Layout/styles";
 import Publications from "#components/Publications";
 import Skills from "#components/Skills";
-// import TopBar from "#components/TopBar";
+import TopBar from "#components/TopBar";
 import UsedBy from "#components/UsedBy";
 
 import { Experience as IExperience } from "#types";
@@ -26,7 +26,7 @@ type Props = {
 const Layout: React.FC<Props> = ({ experienceDetail, children }) => {
   return (
     <>
-      {/* <TopBar /> */}
+      <TopBar />
       <Header />
       <StyledLayout>
         <Element name="experience">

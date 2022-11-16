@@ -20,7 +20,7 @@ import {
 import Text from "#components/Text";
 
 import { MiddleAligned, SpaceBetween } from "#styles";
-import { Anchor } from "#types";
+import { Anchor, TextSize } from "#types";
 
 const Header: React.FC = () => {
   const anchors: Anchor[] = [
@@ -51,8 +51,8 @@ const Header: React.FC = () => {
         <MiddleAligned>
           <GoRepoIcon />
           <Title>
-            <Link href={"/"}>AleSerafini</Link>
-            <Text> / </Text>
+            <Link href={"/"}>AlessandroSerafini</Link>
+            <Text size={TextSize.XLARGE}>&nbsp;/&nbsp;</Text>
             <Link href={"/"}>
               <strong>me</strong>
             </Link>
