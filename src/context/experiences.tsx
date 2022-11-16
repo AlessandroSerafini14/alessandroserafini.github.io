@@ -6,6 +6,7 @@ import { Experience } from "#types";
 export type IExperiencesContext = {
   experiences: Experience[];
   getExperienceById: (id: string) => Experience | undefined;
+  getDuration: (experience: Experience) => string;
 };
 
 export type Props = {
@@ -29,8 +30,8 @@ const ExperiencesProvider: React.FC<Props> = ({ children }) => {
       employment: "Fulltime",
       city: "Rimini",
       country: "IT",
-      startDate: dayjs("2012").toDate(),
-      endDate: dayjs("2016").toDate(),
+      startDate: dayjs("2012-01").toDate(),
+      endDate: dayjs("2016-12").toDate(),
       description: (
         <>
           <p>
@@ -58,8 +59,8 @@ const ExperiencesProvider: React.FC<Props> = ({ children }) => {
       employment: "Fulltime",
       city: "San Marino",
       country: "RSM",
-      startDate: dayjs("2014").toDate(),
-      endDate: dayjs("2020").toDate(),
+      startDate: dayjs("2014-01").toDate(),
+      endDate: dayjs("2020-07").toDate(),
       description: (
         <>
           <p>
@@ -86,8 +87,8 @@ const ExperiencesProvider: React.FC<Props> = ({ children }) => {
       employment: "Fulltime",
       city: "San Marino",
       country: "RSM",
-      startDate: dayjs("2020").toDate(),
-      endDate: dayjs("2022").toDate(),
+      startDate: dayjs("2020-07").toDate(),
+      endDate: dayjs("2022-02").toDate(),
       description: (
         <>
           I held the position of Lead React Developer for more than a year,
@@ -132,7 +133,7 @@ const ExperiencesProvider: React.FC<Props> = ({ children }) => {
       employment: "Fulltime",
       city: "Paris",
       country: "FR",
-      startDate: dayjs("2022").toDate(),
+      startDate: dayjs("2022-02").toDate(),
       description: (
         <>
           Checkout Experience Team Promotion BackOffice:
@@ -166,7 +167,12 @@ const ExperiencesProvider: React.FC<Props> = ({ children }) => {
   const getExperienceById = (id: string) =>
     experiences.find((experience) => experience.id === id);
 
-  const outputParams = { experiences, getExperienceById };
+  const getDuration = (experience: Experience) =>
+    experience.endDate
+      ? dayjs(experience.startDate).from(dayjs(experience.endDate), true)
+      : dayjs(experience.startDate).fromNow(true);
+
+  const outputParams = { experiences, getExperienceById, getDuration };
 
   return (
     <ExperiencesContext.Provider value={outputParams}>

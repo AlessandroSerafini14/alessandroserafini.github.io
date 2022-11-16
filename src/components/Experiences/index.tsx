@@ -27,7 +27,7 @@ type Props = {
 };
 
 const Experiences: React.FC<Props> = ({ experienceDetail }) => {
-  const { experiences } = useContext(ExperiencesContext);
+  const { experiences, getDuration } = useContext(ExperiencesContext);
   const { isMobile } = useMediaQuery();
 
   const BoxHeader = () => (
@@ -64,7 +64,7 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
                   <Text>{`feat(${experienceDetail.company.name}): Read about my experience`}</Text>
                 </Column>
               )}
-              <Column>{dayjs(experienceDetail.startDate).fromNow(true)}</Column>
+              <Column>{getDuration(experienceDetail)}</Column>
             </Row>
           </>
         ) : (
@@ -88,7 +88,7 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
                     </Link>
                   </Column>
                 )}
-                <Column>{dayjs(experience.startDate).fromNow(true)}</Column>
+                <Column>{getDuration(experience)}</Column>
               </Row>
             ))
         )}
