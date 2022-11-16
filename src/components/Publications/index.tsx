@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 import React from "react";
 import { AiOutlineMedium } from "react-icons/ai";
 
@@ -6,6 +7,8 @@ import ItemsList from "#components/ItemsList";
 import { Title, Chip } from "#components/Layout/styles";
 
 import { Item, Publication, ChipType } from "#types";
+
+dayjs.extend(localizedFormat);
 
 const Publications: React.FC = () => {
   const publications: Publication[] = [
@@ -23,7 +26,7 @@ const Publications: React.FC = () => {
     .map((publication) => ({
       id: publication.id,
       title: publication.name,
-      subtitle: publication.date.toDateString(),
+      subtitle: dayjs(publication.date).format("ll"),
       url: publication.url,
       icon: <AiOutlineMedium />,
     }));
