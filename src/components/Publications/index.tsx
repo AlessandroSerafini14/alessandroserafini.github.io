@@ -6,20 +6,12 @@ import { AiOutlineMedium } from "react-icons/ai";
 import ItemsList from "#components/ItemsList";
 import { Title, Chip } from "#components/Layout/styles";
 
-import { Item, Publication, ChipType } from "#types";
+import { publications } from "#constants";
+import { Item, ChipType } from "#types";
 
 dayjs.extend(localizedFormat);
 
 const Publications: React.FC = () => {
-  const publications: Publication[] = [
-    {
-      id: "js",
-      name: "How does JavaScript works under the hood?",
-      date: dayjs("2022-02-21").toDate(),
-      url: "https://medium.com/@aserafini/c6f80291c929",
-    },
-  ];
-
   const items: Item[] = publications
     .slice(0)
     .reverse()

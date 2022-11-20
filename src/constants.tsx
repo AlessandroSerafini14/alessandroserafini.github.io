@@ -1,7 +1,13 @@
 import dayjs from "dayjs";
 import React from "react";
 
-import { Experience } from "#types";
+import {
+  Education,
+  Experience,
+  Language,
+  LanguageLevel,
+  Publication,
+} from "#types";
 
 export const theme = {
   spacing: {
@@ -182,5 +188,90 @@ export const experiences: Experience[] = [
         </ul>
       </>
     ),
+  },
+];
+
+export const publications: Publication[] = [
+  {
+    id: "js",
+    name: "How does JavaScript works under the hood?",
+    date: dayjs("2022-02-21").toDate(),
+    url: "https://medium.com/@aserafini/c6f80291c929",
+  },
+];
+
+export const educations: Education[] = [
+  {
+    id: "iti",
+    name: "State Institute of Secondary Education Gobetti De Gasperi",
+    startDate: dayjs("2007").toDate(),
+    endDate: dayjs("2011").toDate(),
+    place: "Morciano di Romagna (IT)",
+  },
+  {
+    id: "php",
+    name: "PHP on MySQL",
+    startDate: dayjs("2013").toDate(),
+    place: "Rome (IT)",
+  },
+  {
+    id: "seo",
+    name: "Advanced SEO Tool",
+    startDate: dayjs("2016").toDate(),
+    place: "Rimini (IT)",
+  },
+  {
+    id: "uniurb",
+    name: "University of Urbino Carlo Bo",
+    startDate: dayjs("2017").toDate(),
+    endDate: dayjs("2020").toDate(),
+    place: "Urbino (IT)",
+  },
+];
+
+export const skills: string[] = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "React.js",
+  "Web Development",
+  "Unit Testing",
+  "React testing library",
+  "Jest",
+  "Redux",
+  "Git",
+  "styled-components",
+  "Storybook",
+  "Gitlab-ci",
+  "Semantic-release",
+  "React Native",
+  "Bootstrap",
+  "HTML5",
+  "jQuery",
+  "SCSS",
+  "CSS",
+];
+
+export const languages: Language[] = [
+  {
+    id: "it",
+    name: "Italian",
+    percentage: 60,
+    color: "#008C45",
+    level: LanguageLevel.C2,
+  },
+  {
+    id: "en",
+    name: "English",
+    percentage: 35,
+    color: "#C8102E",
+    level: LanguageLevel.B2,
+  },
+  {
+    id: "fr",
+    name: "French",
+    percentage: 5,
+    color: "#002654",
+    level: LanguageLevel.A1,
   },
 ];

@@ -10,34 +10,11 @@ import {
 import { Title, Chip } from "#components/Layout/styles";
 import Text from "#components/Text";
 
+import { languages } from "#constants";
 import { MiddleAligned } from "#styles";
-import { ChipType, Language, LanguageLevel, TextSize } from "#types";
+import { ChipType, TextSize } from "#types";
 
 const Languages: React.FC = () => {
-  const languages: Language[] = [
-    {
-      id: "it",
-      name: "Italian",
-      percentage: 60,
-      color: "#008C45",
-      level: LanguageLevel.C2,
-    },
-    {
-      id: "en",
-      name: "English",
-      percentage: 35,
-      color: "#C8102E",
-      level: LanguageLevel.B2,
-    },
-    {
-      id: "fr",
-      name: "French",
-      percentage: 5,
-      color: "#002654",
-      level: LanguageLevel.A1,
-    },
-  ];
-
   return (
     <>
       <Title>
