@@ -17,6 +17,7 @@ import Text from "#components/Text";
 import { ExperiencesContext } from "#context/experiences";
 import useMediaQuery from "#hooks/useMediaQuery";
 
+import { experiences } from "#constants";
 import { MiddleAligned } from "#styles";
 import { Experience, TextSize } from "#types";
 
@@ -27,7 +28,7 @@ type Props = {
 };
 
 const Experiences: React.FC<Props> = ({ experienceDetail }) => {
-  const { experiences, getDuration } = useContext(ExperiencesContext);
+  const { getDuration } = useContext(ExperiencesContext);
   const { isMobile } = useMediaQuery();
 
   const BoxHeader = () => (

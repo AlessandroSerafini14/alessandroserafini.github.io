@@ -1,0 +1,186 @@
+import dayjs from "dayjs";
+import React from "react";
+
+import { Experience } from "#types";
+
+export const theme = {
+  spacing: {
+    s100: "8px",
+    s200: "16px",
+    s300: "24px",
+    s400: "32px",
+    s500: "40px",
+    s600: "48px",
+    s700: "56px",
+    s800: "64px",
+    s900: "72px",
+  },
+  size: {
+    layoutGutter: "24px",
+    sidebarWidth: "296px",
+  },
+  breakpoint: {
+    tablet: "544px",
+    desktop: "1012px",
+  },
+  color: {
+    headerBg: "#f6f8fa",
+    canvasDefault: "#ffffff",
+    borderDefault: "#d0d7de",
+    accentSubtle: "#ddf4ff",
+    fgMuted: "#57606a",
+    iconDirectory: "#54aeff",
+    fgDefault: "#24292f",
+    accentFg: "#0969da",
+    neutralMuted: "rgba(175,184,193,0.2)",
+    counterBorder: "rgba(0,0,0,0)",
+    successFg: "#1a7f37",
+    successEmphasis: "#2da44e",
+    borderMuted: "hsla(210,18%,87%,1)",
+    canvasSubtle: "#f6f8fa",
+    headerBorder: "hsla(210,18%,87%,1)",
+    actionListItemDefaultHoverBg: "rgba(208,215,222,0.32)",
+    primerBorderActive: "#fd8c73",
+    btnText: "#24292f",
+    btnBg: "#f6f8fa",
+    btnBorder: "rgba(27,31,36,0.15)",
+    btnShadow: "0 1px 0 rgba(27,31,36,0.04)",
+    btnInsetShadow: "inset 0 1px 0 rgba(255,255,255,0.25)",
+    btnHoverBg: "#f3f4f6",
+    btnHoverBorder: "rgba(27,31,36,0.15)",
+  },
+};
+
+export const experiences: Experience[] = [
+  {
+    id: "freelancer",
+    company: {
+      id: "freelance",
+      name: "Freelance",
+      logo: "/experience/companies/company.svg",
+    },
+    role: "Web Developer",
+    employment: "Fulltime",
+    city: "Rimini",
+    country: "IT",
+    startDate: dayjs("2012-01").toDate(),
+    endDate: dayjs("2016-12").toDate(),
+    description: (
+      <>
+        <p>
+          At the age of 20, I was entrusted with the development of the web
+          portal of the Consortium of Viale Ceccarini: the famous avenue of
+          Riccione which is dedicated to shopping, nightlife and entertainment.
+        </p>
+        <p>
+          The main goal of this portal was to better present the shopping
+          facilities that &quot;follow&quot; the walk and to promote events and
+          shows held by the Consortium itself and by the City of Riccione.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "mr-apps",
+    company: {
+      id: "mr-apps",
+      name: "Mr.APPs",
+      logo: "/experience/companies/mr-apps.jpg",
+    },
+    role: "Front-end Developer & SEO Specialist",
+    employment: "Fulltime",
+    city: "San Marino",
+    country: "RSM",
+    startDate: dayjs("2014-01").toDate(),
+    endDate: dayjs("2020-07").toDate(),
+    description: (
+      <>
+        <p>
+          Over the course of more than 6 years, I had the opportunity to develop
+          mobile first web applications and mobile apps for several clients,
+          including international ones.
+        </p>
+        <p>
+          During this experience I had the opportunity to deepen my knowledge of
+          the main Javascript Frameworks for Frontend development, such as
+          React, React Native, Angular and Vue.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: "botika",
+    company: {
+      id: "botika",
+      name: "Botika",
+      logo: "/experience/companies/botika.jpg",
+    },
+    role: "Senior Frontend Developer",
+    employment: "Fulltime",
+    city: "San Marino",
+    country: "RSM",
+    startDate: dayjs("2020-07").toDate(),
+    endDate: dayjs("2022-02").toDate(),
+    description: (
+      <>
+        I held the position of Lead React Developer for more than a year, where
+        I mainly had the pleasure to develop two platforms: Meeters.space: a
+        social network for the management of trade shows and events
+        <ul>
+          <li>
+            Participated in the technical implementation of the React based
+            frontend
+          </li>
+          <li>Test-driven development using Jest and React Testing Library</li>
+          <li>Working with agile methodologies.</li>
+        </ul>
+        Tiron: A business assistant that manages your agenda and allows your
+        customers to schedule appointments based on your availability
+        synchronized with your calendars.
+        <ul>
+          <li>Supervision and technical support of a team of 3 developers</li>
+          <li>Lead the technical implementation of the React based frontend</li>
+          <li>Test-driven development using Jest and React Testing Library</li>
+          <li>Working with agile methodologies.</li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    id: "veepee",
+    company: {
+      id: "veepee",
+      name: "Veepee",
+      url: "https://www.veepee.fr",
+      logo: "/experience/companies/veepee.jpg",
+    },
+    role: "Senior Frontend Engineer",
+    employment: "Fulltime",
+    city: "Paris",
+    country: "FR",
+    startDate: dayjs("2022-02").toDate(),
+    description: (
+      <>
+        Checkout Experience Team Promotion BackOffice:
+        <ul>
+          <li>Migrated the whole project from Javascript to Typescript</li>
+          <li>
+            Developed and released features for managing promotions and vouchers
+            for both Veepee and Privalia users
+          </li>
+          <li>Improve quality and guidelines</li>
+          <li>Test-driven development using Jest and React Testing Library.</li>
+        </ul>
+        Post Sales team (Transversal):
+        <ul>
+          <li>
+            Revamp of the user’s order list page and push it to the new website
+            design
+          </li>
+          <li>Developed new Components for the design system (KawaUI)</li>
+          <li>Test-driven development using Jest and React Testing Library.</li>
+        </ul>
+      </>
+    ),
+  },
+];

@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import { Title, Chip } from "#components/Layout/styles";
 import { Image } from "#components/UsedBy/styles";
-import { ExperiencesContext } from "#context/experiences";
 
+import { experiences } from "#constants";
 import { ChipType, Company } from "#types";
 const UsedBy: React.FC = () => {
-  const { experiences } = useContext(ExperiencesContext);
-
   const companies = experiences.map((experience) => experience.company);
 
   const Logo = ({ company }: { company: Company }) => (
