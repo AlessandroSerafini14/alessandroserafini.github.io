@@ -69,7 +69,7 @@ jobs:
       - name: Build with Next.js
         run: yarn build
       - name: Static HTML export with Next.js
-        run: yarn next export && touch ./out/.nojekyll && > ./out/.nojekyll && touch out/.nojekyll && > out/.nojekyll && touch ./out/nojekyll
+        run: yarn next export && touch ./out/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
