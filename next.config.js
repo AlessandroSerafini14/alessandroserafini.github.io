@@ -1,20 +1,14 @@
 /** @type {import('next').NextConfig} */
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
+const isProd = process.env.NODE_ENV === "production";
 
-let assetPrefix = "";
-let basePath = "";
-
-if (isGithubActions) {
-  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
-
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: assetPrefix,
-  basePath: basePath,
+  // Use the CDN in production and localhost for development.
+  assetPrefix: isProd
+    ? "https://cdn.statically.io/gh/alessandroserafini-web/alessandroserafini-web.github.io/gh-pages/"
+    : "",
 };
+
+module.exports = nextConfig;
