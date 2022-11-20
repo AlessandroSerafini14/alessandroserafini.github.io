@@ -69,22 +69,10 @@ export const experiences: Experience[] = [
     employment: "Fulltime",
     city: "Rimini",
     country: "IT",
-    startDate: dayjs("2012-01").toDate(),
-    endDate: dayjs("2016-12").toDate(),
-    description: (
-      <>
-        <p>
-          At the age of 20, I was entrusted with the development of the web
-          portal of the Consortium of Viale Ceccarini: the famous avenue of
-          Riccione which is dedicated to shopping, nightlife and entertainment.
-        </p>
-        <p>
-          The main goal of this portal was to better present the shopping
-          facilities that &quot;follow&quot; the walk and to promote events and
-          shows held by the Consortium itself and by the City of Riccione.
-        </p>
-      </>
-    ),
+    startDate: dayjs("2012-01").toString(),
+    endDate: dayjs("2016-12").toString(),
+    description:
+      "<p>At the age of 20, I was entrusted with the development of the web portal of the Consortium of Viale Ceccarini: the famous avenue of Riccione which is dedicated to shopping, nightlife and entertainment. </p> <p> The main goal of this portal was to better present the shopping facilities that &quot;follow&quot; the walk and to promote events and shows held by the Consortium itself and by the City of Riccione. </p>",
   },
   {
     id: "mr-apps",
@@ -97,22 +85,10 @@ export const experiences: Experience[] = [
     employment: "Fulltime",
     city: "San Marino",
     country: "RSM",
-    startDate: dayjs("2014-01").toDate(),
-    endDate: dayjs("2020-07").toDate(),
-    description: (
-      <>
-        <p>
-          Over the course of more than 6 years, I had the opportunity to develop
-          mobile first web applications and mobile apps for several clients,
-          including international ones.
-        </p>
-        <p>
-          During this experience I had the opportunity to deepen my knowledge of
-          the main Javascript Frameworks for Frontend development, such as
-          React, React Native, Angular and Vue.
-        </p>
-      </>
-    ),
+    startDate: dayjs("2014-01").toString(),
+    endDate: dayjs("2020-07").toString(),
+    description:
+      "<p> Over the course of more than 6 years, I had the opportunity to develop mobile first web applications and mobile apps for several clients, including international ones. </p> <p> During this experience I had the opportunity to deepen my knowledge of the main Javascript Frameworks for Frontend development, such as React, React Native, Angular and Vue. </p>",
   },
   {
     id: "botika",
@@ -125,32 +101,10 @@ export const experiences: Experience[] = [
     employment: "Fulltime",
     city: "San Marino",
     country: "RSM",
-    startDate: dayjs("2020-07").toDate(),
-    endDate: dayjs("2022-02").toDate(),
-    description: (
-      <>
-        I held the position of Lead React Developer for more than a year, where
-        I mainly had the pleasure to develop two platforms: Meeters.space: a
-        social network for the management of trade shows and events
-        <ul>
-          <li>
-            Participated in the technical implementation of the React based
-            frontend
-          </li>
-          <li>Test-driven development using Jest and React Testing Library</li>
-          <li>Working with agile methodologies.</li>
-        </ul>
-        Tiron: A business assistant that manages your agenda and allows your
-        customers to schedule appointments based on your availability
-        synchronized with your calendars.
-        <ul>
-          <li>Supervision and technical support of a team of 3 developers</li>
-          <li>Lead the technical implementation of the React based frontend</li>
-          <li>Test-driven development using Jest and React Testing Library</li>
-          <li>Working with agile methodologies.</li>
-        </ul>
-      </>
-    ),
+    startDate: dayjs("2020-07").toString(),
+    endDate: dayjs("2022-02").toString(),
+    description:
+      "I held the position of Lead React Developer for more than a year, where I mainly had the pleasure to develop two platforms: Meeters.space: a social network for the management of trade shows and events <ul> <li> Participated in the technical implementation of the React based frontend </li> <li>Test-driven development using Jest and React Testing Library</li> <li>Working with agile methodologies.</li> </ul> Tiron: A business assistant that manages your agenda and allows your customers to schedule appointments based on your availability synchronized with your calendars. <ul> <li>Supervision and technical support of a team of 3 developers</li> <li>Lead the technical implementation of the React based frontend</li> <li>Test-driven development using Jest and React Testing Library</li> <li>Working with agile methodologies.</li> </ul>",
   },
   {
     id: "veepee",
@@ -164,30 +118,9 @@ export const experiences: Experience[] = [
     employment: "Fulltime",
     city: "Paris",
     country: "FR",
-    startDate: dayjs("2022-02").toDate(),
-    description: (
-      <>
-        Checkout Experience Team Promotion BackOffice:
-        <ul>
-          <li>Migrated the whole project from Javascript to Typescript</li>
-          <li>
-            Developed and released features for managing promotions and vouchers
-            for both Veepee and Privalia users
-          </li>
-          <li>Improve quality and guidelines</li>
-          <li>Test-driven development using Jest and React Testing Library.</li>
-        </ul>
-        Post Sales team (Transversal):
-        <ul>
-          <li>
-            Revamp of the user’s order list page and push it to the new website
-            design
-          </li>
-          <li>Developed new Components for the design system (KawaUI)</li>
-          <li>Test-driven development using Jest and React Testing Library.</li>
-        </ul>
-      </>
-    ),
+    startDate: dayjs("2022-02").toString(),
+    description:
+      "Checkout Experience Team Promotion BackOffice: <ul> <li>Migrated the whole project from Javascript to Typescript</li> <li> Developed and released features for managing promotions and vouchers for both Veepee and Privalia users </li> <li>Improve quality and guidelines</li> <li>Test-driven development using Jest and React Testing Library.</li> </ul> Post Sales team (Transversal): <ul> <li> Revamp of the user’s order list page and push it to the new website design </li> <li>Developed new Components for the design system (KawaUI)</li> <li>Test-driven development using Jest and React Testing Library.</li> </ul>",
   },
 ];
 
@@ -195,7 +128,7 @@ export const publications: Publication[] = [
   {
     id: "js",
     name: "How does JavaScript works under the hood?",
-    date: dayjs("2022-02-21").toDate(),
+    date: dayjs("2022-02-21").toString(),
     url: "https://medium.com/@aserafini/c6f80291c929",
   },
 ];
@@ -204,27 +137,27 @@ export const educations: Education[] = [
   {
     id: "iti",
     name: "State Institute of Secondary Education Gobetti De Gasperi",
-    startDate: dayjs("2007").toDate(),
-    endDate: dayjs("2011").toDate(),
+    startDate: dayjs("2007").toString(),
+    endDate: dayjs("2011").toString(),
     place: "Morciano di Romagna (IT)",
   },
   {
     id: "php",
     name: "PHP on MySQL",
-    startDate: dayjs("2013").toDate(),
+    startDate: dayjs("2013").toString(),
     place: "Rome (IT)",
   },
   {
     id: "seo",
     name: "Advanced SEO Tool",
-    startDate: dayjs("2016").toDate(),
+    startDate: dayjs("2016").toString(),
     place: "Rimini (IT)",
   },
   {
     id: "uniurb",
     name: "University of Urbino Carlo Bo",
-    startDate: dayjs("2017").toDate(),
-    endDate: dayjs("2020").toDate(),
+    startDate: dayjs("2017").toString(),
+    endDate: dayjs("2020").toString(),
     place: "Urbino (IT)",
   },
 ];

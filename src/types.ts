@@ -40,9 +40,9 @@ export type Experience = {
   employment: string;
   city: string;
   country: string;
-  description: React.ReactNode;
-  startDate: Date;
-  endDate?: Date;
+  description: string;
+  startDate: string;
+  endDate?: string;
 };
 
 export type Company = {
@@ -55,8 +55,8 @@ export type Company = {
 export type Education = {
   id: string;
   name: string;
-  startDate: Date;
-  endDate?: Date;
+  startDate: string;
+  endDate?: string;
   place: string;
 };
 
@@ -79,6 +79,6 @@ export type Language = {
 export type Publication = {
   id: string;
   name: string;
-  date: Date;
+  date: string;
   url: string;
 };

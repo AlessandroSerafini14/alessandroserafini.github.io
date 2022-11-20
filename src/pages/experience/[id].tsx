@@ -1,54 +1,50 @@
+import { ParsedUrlQuery } from "querystring";
+
 import dayjs from "dayjs";
-import { useRouter } from "next/router";
-import React, { useContext, useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import React from "react";
 
 import StandardBox from "#components/Box/Standard";
 import Image from "#components/Image";
 import Layout from "#components/Layout";
-import { ExperiencesContext } from "#context/experiences";
 import { MiddleAligned } from "#routes/experienceDetail/styles";
 
 import { experiences } from "#constants";
 import { Experience } from "#types";
 
-export default function ExperienceDetail() {
-  const router = useRouter();
-  const { id } = router.query;
-  const { getExperienceById } = useContext(ExperiencesContext);
+type Props = {
+  experience: Experience;
+};
 
-  const [experienceDetail, setExperienceDetail] = useState<
-    Experience | undefined
-  >();
-
-  useEffect(() => {
-    if (!id) return;
-    setExperienceDetail(getExperienceById(id as string));
-  }, [id]);
-
-  if (!experienceDetail) return;
+export default function ExperienceDetail({ experience }: Props) {
+  const {
+    company,
+    employment,
+    city,
+    country,
+    role,
+    startDate,
+    endDate,
+    description,
+  } = experience;
+  const intro = `${company.name} · ${employment} · ${city} (${country})`;
+  const period = `${dayjs(startDate).format("YYYY")}  - ${
+    endDate ? `${dayjs(endDate).format("YYYY")}` : "Current"
+  }`;
 
   return (
     <>
-      <Layout experienceDetail={experienceDetail}>
+      <Layout experienceDetail={experience}>
         <StandardBox>
           <MiddleAligned>
-            <Image size={40} isCircle src={experienceDetail.company.logo} />
-            <h1>{experienceDetail.role}</h1>
+            <Image size={40} isCircle src={company.logo} />
+            <h1>{role}</h1>
           </MiddleAligned>
           <h2>Details</h2>
-          <p>
-            {experienceDetail.company.name} · {experienceDetail.employment} ·{" "}
-            {experienceDetail.city} ({experienceDetail.country})
-          </p>
-          <p>
-            {`${dayjs(experienceDetail.startDate).format("YYYY")}  - ${
-              experienceDetail.endDate
-                ? `${dayjs(experienceDetail.endDate).format("YYYY")}`
-                : "Current"
-            }`}
-          </p>
+          <p>{intro}</p>
+          <p>{period}</p>
           <h2>Descrption</h2>
-          {experienceDetail.description}
+          <div dangerouslySetInnerHTML={{ __html: description }} />
         </StandardBox>
       </Layout>
     </>
@@ -62,8 +58,15 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps() {
-  return {
-    props: {}, // will be passed to the page component as props
-  };
+interface ExperienceDetailParams extends ParsedUrlQuery {
+  id: string;
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { id } = context.params as ExperienceDetailParams;
+  const experience = experiences.find((e) => e.id === id);
+
+  return {
+    props: { experience },
+  };
+};
