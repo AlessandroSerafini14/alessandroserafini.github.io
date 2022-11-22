@@ -1,18 +1,29 @@
 import React from "react";
 
-import { Image as StyledImage } from "#components/Image/styles";
+import { StyledImage } from "#components/Image/styles";
 type Props = {
   src: string;
+  alt: string;
+  width: number;
+  height?: number;
   isCircle?: boolean;
-  size?: number;
 };
 
-const Image: React.FC<Props> = ({ src, isCircle, size, ...restProps }) => {
+const Image: React.FC<Props> = ({
+  src,
+  isCircle,
+  alt,
+  width,
+  height = width,
+  ...restProps
+}) => {
   return (
     <StyledImage
       src={src}
       isCircle={isCircle}
-      style={{ width: size }}
+      width={width}
+      height={height}
+      alt={alt}
       {...restProps}
     />
   );

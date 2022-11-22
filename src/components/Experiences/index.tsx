@@ -33,7 +33,12 @@ const Experiences: React.FC<Props> = ({ experienceDetail }) => {
 
   const BoxHeader = () => (
     <Header>
-      <Avatar src={"/ale-serafini.jpg"} isCircle size={24} />
+      <Avatar
+        src={"/ale-serafini.jpg"}
+        alt="Alessandro Serafini"
+        isCircle
+        width={24}
+      />
       <strong>AlessandroSerafini</strong>
       <Text>{`feat(${
         experiences[experiences.length - 1].company.name

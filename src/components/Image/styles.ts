@@ -1,6 +1,7 @@
+import Image from "next/image";
 import styled, { css } from "styled-components";
 
-export const Image = styled.img<{ isCircle?: boolean }>`
+export const StyledImage = styled(Image)<{ isCircle?: boolean }>`
   ${({ isCircle }) =>
     isCircle &&
     css`

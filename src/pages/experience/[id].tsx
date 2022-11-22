@@ -37,7 +37,7 @@ export default function ExperienceDetail({ experience }: Props) {
       <Layout experienceDetail={experience}>
         <StandardBox>
           <MiddleAligned>
-            <Image size={40} isCircle src={company.logo} />
+            <Image width={40} isCircle src={company.logo} alt={company.name} />
             <h1>{role}</h1>
           </MiddleAligned>
           <h2>Details</h2>

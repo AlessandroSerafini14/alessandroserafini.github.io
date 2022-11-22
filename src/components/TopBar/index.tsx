@@ -12,7 +12,12 @@ const TopBar: React.FC = () => {
     <Header>
       <Layout>
         <MiddleAligned>
-          <Logo isCircle size={40} src="/ale-serafini.jpg" />
+          <Logo
+            isCircle
+            width={40}
+            src="/ale-serafini.jpg"
+            alt="Alessandro Serafini"
+          />
           <Text size={TextSize.LARGE}>Alessandro Serafini</Text>
         </MiddleAligned>
       </Layout>

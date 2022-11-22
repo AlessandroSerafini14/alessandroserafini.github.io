@@ -9,7 +9,13 @@ const UsedBy: React.FC = () => {
   const companies = experiences.map((experience) => experience.company);
 
   const Logo = ({ company }: { company: Company }) => (
-    <Image size={32} isCircle key={company.id} src={company.logo} />
+    <Image
+      width={32}
+      isCircle
+      key={company.id}
+      src={company.logo}
+      alt={company.name}
+    />
   );
 
   return (

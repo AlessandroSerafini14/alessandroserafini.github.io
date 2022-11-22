@@ -103,7 +103,7 @@ export const experiences: Experience[] = [
     startDate: dayjs("2020-07").toString(),
     endDate: dayjs("2022-02").toString(),
     description:
-      "I held the position of Lead React Developer for more than a year, where I mainly had the pleasure to develop two platforms: Meeters.space: a social network for the management of trade shows and events <ul> <li> Participated in the technical implementation of the React based frontend </li> <li>Test-driven development using Jest and React Testing Library</li> <li>Working with agile methodologies.</li> </ul> Tiron: A business assistant that manages your agenda and allows your customers to schedule appointments based on your availability synchronized with your calendars. <ul> <li>Supervision and technical support of a team of 3 developers</li> <li>Lead the technical implementation of the React based frontend</li> <li>Test-driven development using Jest and React Testing Library</li> <li>Working with agile methodologies.</li> </ul>",
+      "I held the position of Lead React Developer for more than a year, where I mainly had the pleasure to develop two platforms: Meeters.space: a social network for the management of trade shows and events <ul> <li> Participated in the technical implementation of the React based frontend</li><li>Test-driven development using Jest and React Testing Library</li><li>Working with agile methodologies.</li> </ul> Tiron: A business assistant that manages your agenda and allows your customers to schedule appointments based on your availability synchronized with your calendars. <ul> <li>Supervision and technical support of a team of 3 developers</li><li>Lead the technical implementation of the React based frontend</li><li>Test-driven development using Jest and React Testing Library</li><li>Working with agile methodologies.</li> </ul>",
   },
   {
     id: "veepee",
@@ -119,7 +119,7 @@ export const experiences: Experience[] = [
     country: "FR",
     startDate: dayjs("2022-02").toString(),
     description:
-      "Checkout Experience Team Promotion BackOffice: <ul> <li>Migrated the whole project from Javascript to Typescript</li> <li> Developed and released features for managing promotions and vouchers for both Veepee and Privalia users </li> <li>Improve quality and guidelines</li> <li>Test-driven development using Jest and React Testing Library.</li> </ul> Post Sales team (Transversal): <ul> <li> Revamp of the user’s order list page and push it to the new website design </li> <li>Developed new Components for the design system (KawaUI)</li> <li>Test-driven development using Jest and React Testing Library.</li> </ul>",
+      "Checkout Experience Team - Promotion Dashboard: <ul> <li>Migrated the whole project from Javascript to Typescript</li><li> Developed and released features for managing promotions and vouchers for both Veepee and Privalia users</li><li>Technical interviews for frontend-related positions across the team</li><li>Improve quality and guidelines</li><li>Test-driven development using Jest and React Testing Library.</li> </ul> Post Sales team (Transversal): <ul> <li> Revamp of the user’s order list page and push it to the new website design</li><li>Developed new Components for the design system (KawaUI)</li><li>Test-driven development using Jest and React Testing Library.</li> </ul>",
   },
 ];
 
