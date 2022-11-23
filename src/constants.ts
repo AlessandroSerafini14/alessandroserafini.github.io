@@ -126,9 +126,9 @@ export const experiences: Experience[] = [
 export const publications: Publication[] = [
   {
     id: "js",
-    name: "How does JavaScript works under the hood?",
+    name: "How does JavaScript work under the hood?",
     date: dayjs("2022-02-21").toString(),
-    url: "https://medium.com/@aserafini/c6f80291c929",
+    url: "https://medium.com/vptech/how-does-javascript-work-under-the-hood-353a400426ff",
   },
 ];
 
